@@ -417,18 +417,18 @@ public final class DaggerApp_HiltComponents_SingletonC {
     private static final class LazyClassKeyProvider {
       static String com_aya_mazaadytask_activity_MainViewModel = "com.aya.mazaadytask.activity.MainViewModel";
 
-      static String com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel = "com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel";
-
       static String com_aya_mazaadytask_listMovies_ListMoviesViewModel = "com.aya.mazaadytask.listMovies.ListMoviesViewModel";
+
+      static String com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel = "com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel";
 
       @KeepFieldType
       MainViewModel com_aya_mazaadytask_activity_MainViewModel2;
 
       @KeepFieldType
-      DetailsMovieViewModel com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel2;
+      ListMoviesViewModel com_aya_mazaadytask_listMovies_ListMoviesViewModel2;
 
       @KeepFieldType
-      ListMoviesViewModel com_aya_mazaadytask_listMovies_ListMoviesViewModel2;
+      DetailsMovieViewModel com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel2;
     }
   }
 
@@ -475,20 +475,20 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_aya_mazaadytask_activity_MainViewModel = "com.aya.mazaadytask.activity.MainViewModel";
-
       static String com_aya_mazaadytask_listMovies_ListMoviesViewModel = "com.aya.mazaadytask.listMovies.ListMoviesViewModel";
 
       static String com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel = "com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel";
 
-      @KeepFieldType
-      MainViewModel com_aya_mazaadytask_activity_MainViewModel2;
+      static String com_aya_mazaadytask_activity_MainViewModel = "com.aya.mazaadytask.activity.MainViewModel";
 
       @KeepFieldType
       ListMoviesViewModel com_aya_mazaadytask_listMovies_ListMoviesViewModel2;
 
       @KeepFieldType
       DetailsMovieViewModel com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel2;
+
+      @KeepFieldType
+      MainViewModel com_aya_mazaadytask_activity_MainViewModel2;
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
