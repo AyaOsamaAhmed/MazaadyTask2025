@@ -75,17 +75,13 @@ class ListMovieFragment : BaseFragment<ListMovieFragmentBinding, ListMoviesViewM
                         binding.sortLayout.setImageResource(R.drawable.ic_grid_view)
                         binding.moviesRV.layoutManager =
                             GridLayoutManager(requireContext(),2, GridLayoutManager.VERTICAL , false)
-                        it.moviesPaging?.let { movies ->
-                            adapter.submitData(lifecycle, movies)
-                        }
                     } else {
                         binding.sortLayout.setImageResource(R.drawable.ic_list_view)
                         binding.moviesRV.layoutManager =
                             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
-                        it.moviesPaging?.let { movies ->
-                            adapter.submitData(lifecycle, movies)
-                        }
+                    }
+                    it.moviesPaging?.let { movies ->
+                        adapter.submitData(lifecycle, movies)
                     }
                 }
             }
