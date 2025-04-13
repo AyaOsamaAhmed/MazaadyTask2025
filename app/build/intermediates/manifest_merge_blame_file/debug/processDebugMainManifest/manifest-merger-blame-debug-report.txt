@@ -50,8 +50,8 @@
 32-->E:\Projects\MazaadyTask\app\src\main\AndroidManifest.xml:17:9-49
 33        <activity
 33-->E:\Projects\MazaadyTask\app\src\main\AndroidManifest.xml:19:9-29:20
-34            android:name="com.aya.mazaadytask.activity.MainActivity"
-34-->E:\Projects\MazaadyTask\app\src\main\AndroidManifest.xml:20:13-50
+34            android:name="com.aya.mazaadytask.ui.activity.MainActivity"
+34-->E:\Projects\MazaadyTask\app\src\main\AndroidManifest.xml:20:13-53
 35            android:exported="true"
 35-->E:\Projects\MazaadyTask\app\src\main\AndroidManifest.xml:21:13-36
 36            android:label="@string/app_name"

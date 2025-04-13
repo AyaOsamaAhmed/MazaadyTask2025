@@ -4612,7 +4612,6 @@ int layout details_movie_fragment 0x7f0b0073
 int layout dp_example 0x7f0b002c
 int layout ime_base_split_test_activity 0x7f0b002d
 int layout ime_secondary_split_test_activity 0x7f0b002e
-int layout item_movie_horizontal 0x7f0b002f
 int layout item_movie_vertical 0x7f0b0030
 int layout list_movie_fragment 0x7f0b0031
 int layout m3_alert_dialog 0x7f0b0032

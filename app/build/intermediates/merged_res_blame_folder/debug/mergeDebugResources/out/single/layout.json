@@ -1,9 +1,5 @@
 [
     {
-        "merged": "com.aya.mazaadytask.app-mergeDebugResources-90:/layout/main_activity.xml",
-        "source": "com.aya.mazaadytask.app-main-93:/layout/main_activity.xml"
-    },
-    {
         "merged": "C:\\Users\\YaYa\\.gradle\\daemon\\8.10.2\\com.aya.mazaadytask.app-mergeDebugResources-90:\\layout\\list_movie_fragment.xml",
         "source": "C:\\Users\\YaYa\\.gradle\\daemon\\8.10.2\\com.aya.mazaadytask.app-main-93:\\layout\\list_movie_fragment.xml"
     },
@@ -26,9 +22,5 @@
     {
         "merged": "C:\\Users\\YaYa\\.gradle\\daemon\\8.10.2\\com.aya.mazaadytask.app-mergeDebugResources-90:\\layout\\item_movie_vertical.xml",
         "source": "C:\\Users\\YaYa\\.gradle\\daemon\\8.10.2\\com.aya.mazaadytask.app-main-93:\\layout\\item_movie_vertical.xml"
-    },
-    {
-        "merged": "com.aya.mazaadytask.app-mergeDebugResources-90:/layout/list_movie_fragment.xml",
-        "source": "com.aya.mazaadytask.app-main-93:/layout/list_movie_fragment.xml"
     }
 ]

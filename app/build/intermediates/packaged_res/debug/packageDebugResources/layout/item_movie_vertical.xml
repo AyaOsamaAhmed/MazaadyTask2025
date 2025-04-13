@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/_5sdp"
-    app:cardCornerRadius="@dimen/_12sdp">
+    app:cardCornerRadius="@dimen/_12sdp"
+    >
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_5sdp">
+        android:padding="8dp"
+        android:layout_margin="@dimen/_5sdp"
+        >
 
         <ImageView
             android:id="@+id/img_poster"

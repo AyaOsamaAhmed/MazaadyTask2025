@@ -4613,7 +4613,6 @@ layout details_movie_fragment
 layout dp_example
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
-layout item_movie_horizontal
 layout item_movie_vertical
 layout list_movie_fragment
 layout m3_alert_dialog

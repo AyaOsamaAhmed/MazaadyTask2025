@@ -96,8 +96,8 @@
         "source": "C:\\Users\\YaYa\\.gradle\\daemon\\8.10.2\\com.aya.mazaadytask.app-main-93:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.aya.mazaadytask.app-debug-91:/navigation_main_nav.xml.flat",
-        "source": "com.aya.mazaadytask.app-main-93:/navigation/main_nav.xml"
+        "merged": "com.aya.mazaadytask.app-debug-91:/layout_details_movie_fragment.xml.flat",
+        "source": "com.aya.mazaadytask.app-main-93:/layout/details_movie_fragment.xml"
     },
     {
         "merged": "C:\\Users\\YaYa\\.gradle\\daemon\\8.10.2\\com.aya.mazaadytask.app-debug-91:\\layout_item_movie_horizontal.xml.flat",

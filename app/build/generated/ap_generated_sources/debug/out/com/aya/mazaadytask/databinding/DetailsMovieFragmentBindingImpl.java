@@ -21,6 +21,7 @@ public class DetailsMovieFragmentBindingImpl extends DetailsMovieFragmentBinding
         sViewsWithIds.put(R.id.tx_title, 5);
         sViewsWithIds.put(R.id.tx_release_date, 6);
         sViewsWithIds.put(R.id.tx_overview, 7);
+        sViewsWithIds.put(R.id.img_fav, 8);
     }
     // views
     @NonNull
@@ -31,13 +32,14 @@ public class DetailsMovieFragmentBindingImpl extends DetailsMovieFragmentBinding
     // Inverse Binding Event Handlers
 
     public DetailsMovieFragmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private DetailsMovieFragmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[3]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
             , (android.widget.ImageView) bindings[2]
+            , (android.widget.ImageView) bindings[8]
             , (android.widget.ImageView) bindings[4]
             , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[6]

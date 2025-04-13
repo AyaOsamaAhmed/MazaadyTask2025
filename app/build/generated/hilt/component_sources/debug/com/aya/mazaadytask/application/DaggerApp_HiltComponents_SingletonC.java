@@ -10,20 +10,20 @@ import com.aya.data.api.MovieApis;
 import com.aya.data.database.AppDatabase;
 import com.aya.data.database.MovieDao;
 import com.aya.data.repository.MovieRepositoryImpl;
-import com.aya.mazaadytask.activity.MainActivity;
-import com.aya.mazaadytask.activity.MainViewModel;
-import com.aya.mazaadytask.activity.MainViewModel_HiltModules;
-import com.aya.mazaadytask.detailsMovie.DetailsMovieFragment;
-import com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel;
-import com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel_HiltModules;
 import com.aya.mazaadytask.di.DatabaseModule_ProvideDatabaseFactory;
 import com.aya.mazaadytask.di.DatabaseModule_ProvideUserDaoFactory;
 import com.aya.mazaadytask.di.NetworkModule_ProvideApiServiceFactory;
 import com.aya.mazaadytask.di.NetworkModule_ProvideOkHttpClientFactory;
 import com.aya.mazaadytask.di.NetworkModule_ProvideRetrofitFactory;
-import com.aya.mazaadytask.listMovies.ListMovieFragment;
-import com.aya.mazaadytask.listMovies.ListMoviesViewModel;
-import com.aya.mazaadytask.listMovies.ListMoviesViewModel_HiltModules;
+import com.aya.mazaadytask.ui.activity.MainActivity;
+import com.aya.mazaadytask.ui.activity.MainViewModel;
+import com.aya.mazaadytask.ui.activity.MainViewModel_HiltModules;
+import com.aya.mazaadytask.ui.list_movies.ListMovieFragment;
+import com.aya.mazaadytask.ui.list_movies.ListMoviesViewModel;
+import com.aya.mazaadytask.ui.list_movies.ListMoviesViewModel_HiltModules;
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsFragment;
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel;
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel_HiltModules;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -332,11 +332,11 @@ public final class DaggerApp_HiltComponents_SingletonC {
     }
 
     @Override
-    public void injectDetailsMovieFragment(DetailsMovieFragment detailsMovieFragment) {
+    public void injectListMovieFragment(ListMovieFragment listMovieFragment) {
     }
 
     @Override
-    public void injectListMovieFragment(ListMovieFragment listMovieFragment) {
+    public void injectMovieDetailsFragment(MovieDetailsFragment movieDetailsFragment) {
     }
 
     @Override
@@ -395,7 +395,7 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Map<Class<?>, Boolean> getViewModelKeys() {
-      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(3).put(LazyClassKeyProvider.com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel, DetailsMovieViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_aya_mazaadytask_listMovies_ListMoviesViewModel, ListMoviesViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_aya_mazaadytask_activity_MainViewModel, MainViewModel_HiltModules.KeyModule.provide()).build());
+      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(3).put(LazyClassKeyProvider.com_aya_mazaadytask_ui_list_movies_ListMoviesViewModel, ListMoviesViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_aya_mazaadytask_ui_activity_MainViewModel, MainViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_aya_mazaadytask_ui_movie_details_MovieDetailsViewModel, MovieDetailsViewModel_HiltModules.KeyModule.provide()).build());
     }
 
     @Override
@@ -415,20 +415,20 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_aya_mazaadytask_activity_MainViewModel = "com.aya.mazaadytask.activity.MainViewModel";
+      static String com_aya_mazaadytask_ui_list_movies_ListMoviesViewModel = "com.aya.mazaadytask.ui.list_movies.ListMoviesViewModel";
 
-      static String com_aya_mazaadytask_listMovies_ListMoviesViewModel = "com.aya.mazaadytask.listMovies.ListMoviesViewModel";
+      static String com_aya_mazaadytask_ui_movie_details_MovieDetailsViewModel = "com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel";
 
-      static String com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel = "com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel";
-
-      @KeepFieldType
-      MainViewModel com_aya_mazaadytask_activity_MainViewModel2;
+      static String com_aya_mazaadytask_ui_activity_MainViewModel = "com.aya.mazaadytask.ui.activity.MainViewModel";
 
       @KeepFieldType
-      ListMoviesViewModel com_aya_mazaadytask_listMovies_ListMoviesViewModel2;
+      ListMoviesViewModel com_aya_mazaadytask_ui_list_movies_ListMoviesViewModel2;
 
       @KeepFieldType
-      DetailsMovieViewModel com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel2;
+      MovieDetailsViewModel com_aya_mazaadytask_ui_movie_details_MovieDetailsViewModel2;
+
+      @KeepFieldType
+      MainViewModel com_aya_mazaadytask_ui_activity_MainViewModel2;
     }
   }
 
@@ -439,11 +439,11 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     private final ViewModelCImpl viewModelCImpl = this;
 
-    private Provider<DetailsMovieViewModel> detailsMovieViewModelProvider;
-
     private Provider<ListMoviesViewModel> listMoviesViewModelProvider;
 
     private Provider<MainViewModel> mainViewModelProvider;
+
+    private Provider<MovieDetailsViewModel> movieDetailsViewModelProvider;
 
     private ViewModelCImpl(SingletonCImpl singletonCImpl,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam,
@@ -458,14 +458,14 @@ public final class DaggerApp_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
-      this.detailsMovieViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.listMoviesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
-      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
+      this.listMoviesViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.mainViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.movieDetailsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
     }
 
     @Override
     public Map<Class<?>, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
-      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(3).put(LazyClassKeyProvider.com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel, ((Provider) detailsMovieViewModelProvider)).put(LazyClassKeyProvider.com_aya_mazaadytask_listMovies_ListMoviesViewModel, ((Provider) listMoviesViewModelProvider)).put(LazyClassKeyProvider.com_aya_mazaadytask_activity_MainViewModel, ((Provider) mainViewModelProvider)).build());
+      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(3).put(LazyClassKeyProvider.com_aya_mazaadytask_ui_list_movies_ListMoviesViewModel, ((Provider) listMoviesViewModelProvider)).put(LazyClassKeyProvider.com_aya_mazaadytask_ui_activity_MainViewModel, ((Provider) mainViewModelProvider)).put(LazyClassKeyProvider.com_aya_mazaadytask_ui_movie_details_MovieDetailsViewModel, ((Provider) movieDetailsViewModelProvider)).build());
     }
 
     @Override
@@ -475,20 +475,20 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @IdentifierNameString
     private static final class LazyClassKeyProvider {
-      static String com_aya_mazaadytask_listMovies_ListMoviesViewModel = "com.aya.mazaadytask.listMovies.ListMoviesViewModel";
+      static String com_aya_mazaadytask_ui_movie_details_MovieDetailsViewModel = "com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel";
 
-      static String com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel = "com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel";
+      static String com_aya_mazaadytask_ui_activity_MainViewModel = "com.aya.mazaadytask.ui.activity.MainViewModel";
 
-      static String com_aya_mazaadytask_activity_MainViewModel = "com.aya.mazaadytask.activity.MainViewModel";
-
-      @KeepFieldType
-      ListMoviesViewModel com_aya_mazaadytask_listMovies_ListMoviesViewModel2;
+      static String com_aya_mazaadytask_ui_list_movies_ListMoviesViewModel = "com.aya.mazaadytask.ui.list_movies.ListMoviesViewModel";
 
       @KeepFieldType
-      DetailsMovieViewModel com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel2;
+      MovieDetailsViewModel com_aya_mazaadytask_ui_movie_details_MovieDetailsViewModel2;
 
       @KeepFieldType
-      MainViewModel com_aya_mazaadytask_activity_MainViewModel2;
+      MainViewModel com_aya_mazaadytask_ui_activity_MainViewModel2;
+
+      @KeepFieldType
+      ListMoviesViewModel com_aya_mazaadytask_ui_list_movies_ListMoviesViewModel2;
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -512,14 +512,14 @@ public final class DaggerApp_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel 
-          return (T) new DetailsMovieViewModel(singletonCImpl.movieRepositoryImplProvider.get());
-
-          case 1: // com.aya.mazaadytask.listMovies.ListMoviesViewModel 
+          case 0: // com.aya.mazaadytask.ui.list_movies.ListMoviesViewModel 
           return (T) new ListMoviesViewModel(singletonCImpl.movieRepositoryImplProvider.get());
 
-          case 2: // com.aya.mazaadytask.activity.MainViewModel 
+          case 1: // com.aya.mazaadytask.ui.activity.MainViewModel 
           return (T) new MainViewModel();
+
+          case 2: // com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel 
+          return (T) new MovieDetailsViewModel(singletonCImpl.movieRepositoryImplProvider.get());
 
           default: throw new AssertionError(id);
         }

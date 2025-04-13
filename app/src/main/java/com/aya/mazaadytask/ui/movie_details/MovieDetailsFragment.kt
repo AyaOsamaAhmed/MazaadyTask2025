@@ -11,6 +11,8 @@ import androidx.navigation.fragment.NavHostFragment
 import com.aya.mazaadytask.R
 import com.aya.mazaadytask.base.BaseFragment
 import com.aya.mazaadytask.databinding.DetailsMovieFragmentBinding
+import com.aya.mazaadytask.extension.loadUrl
+import com.aya.mazaadytask.ui.list_movies.ListMoviesEvent
 import com.aya.mazaadytask.ui.list_movies.adapter.IMAGE_BASE
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,12 +21,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class MovieDetailsFragment : BaseFragment<DetailsMovieFragmentBinding, MovieDetailsViewModel>() {
 
-
     override val viewModel: MovieDetailsViewModel by viewModels()
-
-    private lateinit var nav: NavHostFragment
-    private lateinit var navController: NavController
-
 
     override fun onFragmentReady() {
         setup()
@@ -38,10 +35,16 @@ class MovieDetailsFragment : BaseFragment<DetailsMovieFragmentBinding, MovieDeta
     }
 
     private fun setup() {
+        arguments?.getLong("id").let {
+            viewModel.onEvent(MovieDetailsEvent.SaveMovieId(it!!))
+        }
         binding.imgBack.setOnClickListener {
                 navController.popBackStack()
-            }
-        viewModel.onEvent(MovieDetailsEvent.GetMovieDetailsById(arguments?.getLong("id") ?: 0))
+        }
+        binding.imgFav.setOnClickListener {
+            viewModel.onEvent(MovieDetailsEvent.MarkMovieAsFavorite)
+        }
+        viewModel.onEvent(MovieDetailsEvent.GetMovieDetailsById(viewModel.state.value.movieId!!))
     }
 
     private fun collect() {
@@ -53,9 +56,13 @@ class MovieDetailsFragment : BaseFragment<DetailsMovieFragmentBinding, MovieDeta
                         txTitle.text = item?.title
                         txReleaseDate.text = item?.releaseDate
                         txOverview.text = item?.overview
-                        Glide.with(imgPoster)
-                            .load("$IMAGE_BASE/${item?.posterPath}")
-                            .into(imgPoster)
+                        imgPoster.loadUrl("$IMAGE_BASE/${item?.posterPath}")
+                        imgFav.setImageResource(
+                            if (item?.isFavorite == true) {
+                                R.drawable.ic_favorite
+                            } else {
+                                R.drawable.ic_no_favorite
+                            })
                     }
                 }
             }

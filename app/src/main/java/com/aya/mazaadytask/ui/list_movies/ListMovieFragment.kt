@@ -7,7 +7,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,9 +21,6 @@ import kotlinx.coroutines.launch
 class ListMovieFragment : BaseFragment<ListMovieFragmentBinding, ListMoviesViewModel>() {
 
     override val viewModel: ListMoviesViewModel by viewModels()
-
-    private lateinit var nav: NavHostFragment
-    private lateinit var navController: NavController
 
     private val adapter by lazy {
         MoviesAdapter(

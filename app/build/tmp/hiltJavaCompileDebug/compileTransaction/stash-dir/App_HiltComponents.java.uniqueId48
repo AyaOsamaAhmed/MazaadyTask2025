@@ -1,14 +1,14 @@
 package com.aya.mazaadytask.application;
 
-import com.aya.mazaadytask.activity.MainActivity_GeneratedInjector;
-import com.aya.mazaadytask.activity.MainViewModel_HiltModules;
-import com.aya.mazaadytask.detailsMovie.DetailsMovieFragment_GeneratedInjector;
-import com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel_HiltModules;
 import com.aya.mazaadytask.di.DataModule;
 import com.aya.mazaadytask.di.DatabaseModule;
 import com.aya.mazaadytask.di.NetworkModule;
-import com.aya.mazaadytask.listMovies.ListMovieFragment_GeneratedInjector;
-import com.aya.mazaadytask.listMovies.ListMoviesViewModel_HiltModules;
+import com.aya.mazaadytask.ui.activity.MainActivity_GeneratedInjector;
+import com.aya.mazaadytask.ui.activity.MainViewModel_HiltModules;
+import com.aya.mazaadytask.ui.list_movies.ListMovieFragment_GeneratedInjector;
+import com.aya.mazaadytask.ui.list_movies.ListMoviesViewModel_HiltModules;
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsFragment_GeneratedInjector;
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -164,11 +164,11 @@ public final class App_HiltComponents {
       modules = {
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
-          DetailsMovieViewModel_HiltModules.KeyModule.class,
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           HiltWrapper_SavedStateHandleModule.class,
           ListMoviesViewModel_HiltModules.KeyModule.class,
-          MainViewModel_HiltModules.KeyModule.class
+          MainViewModel_HiltModules.KeyModule.class,
+          MovieDetailsViewModel_HiltModules.KeyModule.class
       }
   )
   @ActivityRetainedScoped
@@ -204,10 +204,10 @@ public final class App_HiltComponents {
 
   @Subcomponent(
       modules = {
-          DetailsMovieViewModel_HiltModules.BindsModule.class,
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
           ListMoviesViewModel_HiltModules.BindsModule.class,
-          MainViewModel_HiltModules.BindsModule.class
+          MainViewModel_HiltModules.BindsModule.class,
+          MovieDetailsViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped
@@ -232,8 +232,8 @@ public final class App_HiltComponents {
       modules = ViewWithFragmentCBuilderModule.class
   )
   @FragmentScoped
-  public abstract static class FragmentC implements DetailsMovieFragment_GeneratedInjector,
-      ListMovieFragment_GeneratedInjector,
+  public abstract static class FragmentC implements ListMovieFragment_GeneratedInjector,
+      MovieDetailsFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,
       ViewComponentManager.ViewWithFragmentComponentBuilderEntryPoint,

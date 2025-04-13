@@ -26,6 +26,9 @@ public abstract class DetailsMovieFragmentBinding extends ViewDataBinding {
   public final ImageView imgBack;
 
   @NonNull
+  public final ImageView imgFav;
+
+  @NonNull
   public final ImageView imgPoster;
 
   @NonNull
@@ -38,12 +41,13 @@ public abstract class DetailsMovieFragmentBinding extends ViewDataBinding {
   public final TextView txTitle;
 
   protected DetailsMovieFragmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ConstraintLayout body, ConstraintLayout header, ImageView imgBack, ImageView imgPoster,
-      TextView txOverview, TextView txReleaseDate, TextView txTitle) {
+      ConstraintLayout body, ConstraintLayout header, ImageView imgBack, ImageView imgFav,
+      ImageView imgPoster, TextView txOverview, TextView txReleaseDate, TextView txTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.body = body;
     this.header = header;
     this.imgBack = imgBack;
+    this.imgFav = imgFav;
     this.imgPoster = imgPoster;
     this.txOverview = txOverview;
     this.txReleaseDate = txReleaseDate;

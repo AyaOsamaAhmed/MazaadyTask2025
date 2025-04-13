@@ -32,7 +32,6 @@ id tx_overview
 id tx_release_date
 id tx_title
 layout details_movie_fragment
-layout item_movie_horizontal
 layout item_movie_vertical
 layout list_movie_fragment
 layout main_activity
