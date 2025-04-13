@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.listMovies
+package com.aya.mazaadytask.ui.list_movies
 
 import com.aya.mazaadytask.base.Action
 

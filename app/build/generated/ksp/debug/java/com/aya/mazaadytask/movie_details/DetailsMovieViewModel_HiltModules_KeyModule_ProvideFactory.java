@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.listMovies;
+package com.aya.mazaadytask.movie_details;
 
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
@@ -21,21 +21,21 @@ import javax.annotation.processing.Generated;
     "cast",
     "deprecation"
 })
-public final class ListMoviesViewModel_HiltModules_KeyModule_ProvideFactory implements Factory<Boolean> {
+public final class DetailsMovieViewModel_HiltModules_KeyModule_ProvideFactory implements Factory<Boolean> {
   @Override
   public Boolean get() {
     return provide();
   }
 
-  public static ListMoviesViewModel_HiltModules_KeyModule_ProvideFactory create() {
+  public static DetailsMovieViewModel_HiltModules_KeyModule_ProvideFactory create() {
     return InstanceHolder.INSTANCE;
   }
 
   public static boolean provide() {
-    return ListMoviesViewModel_HiltModules.KeyModule.provide();
+    return DetailsMovieViewModel_HiltModules.KeyModule.provide();
   }
 
   private static final class InstanceHolder {
-    private static final ListMoviesViewModel_HiltModules_KeyModule_ProvideFactory INSTANCE = new ListMoviesViewModel_HiltModules_KeyModule_ProvideFactory();
+    private static final DetailsMovieViewModel_HiltModules_KeyModule_ProvideFactory INSTANCE = new DetailsMovieViewModel_HiltModules_KeyModule_ProvideFactory();
   }
 }

@@ -1,6 +1,8 @@
-package com.aya.mazaadytask.detailsMovie;
+package com.aya.mazaadytask.movie_details;
 
 import com.aya.data.repository.MovieRepositoryImpl;
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel;
+
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;
@@ -23,7 +25,7 @@ import javax.inject.Provider;
     "cast",
     "deprecation"
 })
-public final class DetailsMovieViewModel_Factory implements Factory<DetailsMovieViewModel> {
+public final class DetailsMovieViewModel_Factory implements Factory<MovieDetailsViewModel> {
   private final Provider<MovieRepositoryImpl> repoProvider;
 
   public DetailsMovieViewModel_Factory(Provider<MovieRepositoryImpl> repoProvider) {
@@ -31,7 +33,7 @@ public final class DetailsMovieViewModel_Factory implements Factory<DetailsMovie
   }
 
   @Override
-  public DetailsMovieViewModel get() {
+  public MovieDetailsViewModel get() {
     return newInstance(repoProvider.get());
   }
 
@@ -39,7 +41,7 @@ public final class DetailsMovieViewModel_Factory implements Factory<DetailsMovie
     return new DetailsMovieViewModel_Factory(repoProvider);
   }
 
-  public static DetailsMovieViewModel newInstance(MovieRepositoryImpl repo) {
-    return new DetailsMovieViewModel(repo);
+  public static MovieDetailsViewModel newInstance(MovieRepositoryImpl repo) {
+    return new MovieDetailsViewModel(repo);
   }
 }

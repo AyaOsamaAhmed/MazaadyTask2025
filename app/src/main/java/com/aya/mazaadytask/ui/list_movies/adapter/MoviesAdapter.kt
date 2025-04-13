@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.listMovies
+package com.aya.mazaadytask.ui.list_movies.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

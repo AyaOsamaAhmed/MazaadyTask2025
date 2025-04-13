@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.detailsMovie;
+package com.aya.mazaadytask.movie_details;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,8 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 import com.aya.mazaadytask.base.BaseFragment;
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsFragment;
+
 import dagger.hilt.android.flags.FragmentGetContextFix;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
 import dagger.hilt.android.internal.managers.FragmentComponentManager;
@@ -103,7 +105,7 @@ public abstract class Hilt_DetailsMovieFragment<B extends ViewBinding, VM extend
   protected void inject() {
     if (!injected) {
       injected = true;
-      ((DetailsMovieFragment_GeneratedInjector) this.generatedComponent()).injectDetailsMovieFragment(UnsafeCasts.<DetailsMovieFragment>unsafeCast(this));
+      ((DetailsMovieFragment_GeneratedInjector) this.generatedComponent()).injectDetailsMovieFragment(UnsafeCasts.<MovieDetailsFragment>unsafeCast(this));
     }
   }
 

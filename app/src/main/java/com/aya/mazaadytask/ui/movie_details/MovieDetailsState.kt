@@ -1,8 +1,8 @@
-package com.aya.mazaadytask.detailsMovie
+package com.aya.mazaadytask.ui.movie_details
 
 import com.aya.data.database.MovieEntity
 
-data class DetailsMovieState (
+data class MovieDetailsState (
     val isLoading: Boolean = false,
     val movie: MovieEntity? = null,
     val error: String? = null

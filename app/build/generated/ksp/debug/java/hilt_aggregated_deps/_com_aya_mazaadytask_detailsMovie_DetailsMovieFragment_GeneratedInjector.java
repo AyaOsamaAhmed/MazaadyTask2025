@@ -8,7 +8,7 @@ import javax.annotation.processing.Generated;
  */
 @AggregatedDeps(
     components = "dagger.hilt.android.components.FragmentComponent",
-    entryPoints = "com.aya.mazaadytask.detailsMovie.DetailsMovieFragment_GeneratedInjector"
+    entryPoints = "com.aya.mazaadytask.movie_details.DetailsMovieFragment_GeneratedInjector"
 )
 @Generated("dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsGenerator")
 public class _com_aya_mazaadytask_detailsMovie_DetailsMovieFragment_GeneratedInjector {

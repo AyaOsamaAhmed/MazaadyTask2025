@@ -1,4 +1,6 @@
-package com.aya.mazaadytask.detailsMovie;
+package com.aya.mazaadytask.movie_details;
+
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsFragment;
 
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.components.FragmentComponent;
@@ -7,11 +9,11 @@ import dagger.hilt.internal.GeneratedEntryPoint;
 import javax.annotation.processing.Generated;
 
 @OriginatingElement(
-    topLevelClass = DetailsMovieFragment.class
+    topLevelClass = MovieDetailsFragment.class
 )
 @GeneratedEntryPoint
 @InstallIn(FragmentComponent.class)
 @Generated("dagger.hilt.android.processor.internal.androidentrypoint.InjectorEntryPointGenerator")
 public interface DetailsMovieFragment_GeneratedInjector {
-  void injectDetailsMovieFragment(DetailsMovieFragment detailsMovieFragment);
+  void injectDetailsMovieFragment(MovieDetailsFragment movieDetailsFragment);
 }

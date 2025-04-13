@@ -1,4 +1,6 @@
-package com.aya.mazaadytask.listMovies;
+package com.aya.mazaadytask.list_movies;
+
+import com.aya.mazaadytask.ui.list_movies.ListMovieFragment;
 
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.components.FragmentComponent;

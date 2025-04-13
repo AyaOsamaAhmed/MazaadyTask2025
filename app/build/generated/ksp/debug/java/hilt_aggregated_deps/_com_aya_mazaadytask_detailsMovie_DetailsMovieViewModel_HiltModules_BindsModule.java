@@ -8,7 +8,7 @@ import javax.annotation.processing.Generated;
  */
 @AggregatedDeps(
     components = "dagger.hilt.android.components.ViewModelComponent",
-    modules = "com.aya.mazaadytask.detailsMovie.DetailsMovieViewModel_HiltModules.BindsModule"
+    modules = "com.aya.mazaadytask.movie_details.DetailsMovieViewModel_HiltModules.BindsModule"
 )
 @Generated("dagger.hilt.processor.internal.aggregateddeps.AggregatedDepsGenerator")
 public class _com_aya_mazaadytask_detailsMovie_DetailsMovieViewModel_HiltModules_BindsModule {

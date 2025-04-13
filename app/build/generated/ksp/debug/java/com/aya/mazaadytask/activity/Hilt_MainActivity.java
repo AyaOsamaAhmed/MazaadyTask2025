@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 import com.aya.mazaadytask.base.BaseActivity;
+import com.aya.mazaadytask.ui.activity.MainActivity;
+
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
 import dagger.hilt.android.internal.managers.ActivityComponentManager;
 import dagger.hilt.android.internal.managers.SavedStateHandleHolder;

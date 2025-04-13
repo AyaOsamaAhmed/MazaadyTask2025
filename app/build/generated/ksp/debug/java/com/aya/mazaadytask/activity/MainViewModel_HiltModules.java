@@ -1,6 +1,9 @@
 package com.aya.mazaadytask.activity;
 
 import androidx.lifecycle.ViewModel;
+
+import com.aya.mazaadytask.ui.activity.MainViewModel;
+
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;

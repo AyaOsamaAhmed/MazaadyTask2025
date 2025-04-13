@@ -1,5 +1,7 @@
 package com.aya.mazaadytask.activity;
 
+import com.aya.mazaadytask.ui.activity.MainActivity;
+
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.components.ActivityComponent;
 import dagger.hilt.codegen.OriginatingElement;

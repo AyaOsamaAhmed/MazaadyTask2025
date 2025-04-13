@@ -1,5 +1,7 @@
 package com.aya.mazaadytask.activity;
 
+import com.aya.mazaadytask.ui.activity.MainViewModel;
+
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;

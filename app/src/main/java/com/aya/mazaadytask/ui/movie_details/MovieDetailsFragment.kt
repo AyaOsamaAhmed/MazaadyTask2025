@@ -1,8 +1,7 @@
-package com.aya.mazaadytask.detailsMovie
+package com.aya.mazaadytask.ui.movie_details
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -12,16 +11,16 @@ import androidx.navigation.fragment.NavHostFragment
 import com.aya.mazaadytask.R
 import com.aya.mazaadytask.base.BaseFragment
 import com.aya.mazaadytask.databinding.DetailsMovieFragmentBinding
-import com.aya.mazaadytask.listMovies.IMAGE_BASE
+import com.aya.mazaadytask.ui.list_movies.adapter.IMAGE_BASE
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class DetailsMovieFragment : BaseFragment<DetailsMovieFragmentBinding, DetailsMovieViewModel>() {
+class MovieDetailsFragment : BaseFragment<DetailsMovieFragmentBinding, MovieDetailsViewModel>() {
 
 
-    override val viewModel: DetailsMovieViewModel by viewModels()
+    override val viewModel: MovieDetailsViewModel by viewModels()
 
     private lateinit var nav: NavHostFragment
     private lateinit var navController: NavController
@@ -42,7 +41,7 @@ class DetailsMovieFragment : BaseFragment<DetailsMovieFragmentBinding, DetailsMo
         binding.imgBack.setOnClickListener {
                 navController.popBackStack()
             }
-        viewModel.onEvent(DetailsMovieEvent.GetMovieById(arguments?.getLong("id")?:0))
+        viewModel.onEvent(MovieDetailsEvent.GetMovieDetailsById(arguments?.getLong("id") ?: 0))
     }
 
     private fun collect() {

@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.listMovies;
+package com.aya.mazaadytask.list_movies;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,8 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.viewbinding.ViewBinding;
 import com.aya.mazaadytask.base.BaseFragment;
+import com.aya.mazaadytask.ui.list_movies.ListMovieFragment;
+
 import dagger.hilt.android.flags.FragmentGetContextFix;
 import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories;
 import dagger.hilt.android.internal.managers.FragmentComponentManager;

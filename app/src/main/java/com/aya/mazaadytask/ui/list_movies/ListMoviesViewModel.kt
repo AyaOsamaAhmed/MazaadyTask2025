@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.listMovies
+package com.aya.mazaadytask.ui.list_movies
 
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn

@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.listMovies
+package com.aya.mazaadytask.ui.list_movies
 
 import androidx.paging.PagingData
 import com.aya.data.database.MovieEntity

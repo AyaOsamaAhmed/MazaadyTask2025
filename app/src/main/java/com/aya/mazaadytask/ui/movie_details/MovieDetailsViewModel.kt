@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.detailsMovie
+package com.aya.mazaadytask.ui.movie_details
 
 import androidx.lifecycle.viewModelScope
 import com.aya.data.repository.MovieRepositoryImpl
@@ -10,16 +10,16 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class DetailsMovieViewModel @Inject constructor(
+class MovieDetailsViewModel @Inject constructor(
     private val repo: MovieRepositoryImpl
 ) : BaseViewModel() {
 
-    private val _state = MutableStateFlow(DetailsMovieState())
+    private val _state = MutableStateFlow(MovieDetailsState())
     val state = _state.asStateFlow()
 
-    fun onEvent(event: DetailsMovieEvent) {
+    fun onEvent(event: MovieDetailsEvent) {
         when (event) {
-            is DetailsMovieEvent.GetMovieById -> getMovieById(event.movieId)
+            is MovieDetailsEvent.GetMovieDetailsById -> getMovieById(event.movieId)
         }
     }
 

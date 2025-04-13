@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.activity
+package com.aya.mazaadytask.ui.activity
 
 import com.aya.mazaadytask.base.Action
 import com.aya.mazaadytask.base.BaseViewModel

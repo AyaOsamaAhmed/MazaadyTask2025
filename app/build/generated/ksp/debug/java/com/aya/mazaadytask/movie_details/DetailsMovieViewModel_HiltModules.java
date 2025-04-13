@@ -1,6 +1,9 @@
-package com.aya.mazaadytask.detailsMovie;
+package com.aya.mazaadytask.movie_details;
 
 import androidx.lifecycle.ViewModel;
+
+import com.aya.mazaadytask.ui.movie_details.MovieDetailsViewModel;
+
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
@@ -15,7 +18,7 @@ import javax.annotation.processing.Generated;
 
 @Generated("dagger.hilt.android.processor.internal.viewmodel.ViewModelProcessor")
 @OriginatingElement(
-    topLevelClass = DetailsMovieViewModel.class
+    topLevelClass = MovieDetailsViewModel.class
 )
 public final class DetailsMovieViewModel_HiltModules {
   private DetailsMovieViewModel_HiltModules() {
@@ -29,9 +32,9 @@ public final class DetailsMovieViewModel_HiltModules {
 
     @Binds
     @IntoMap
-    @LazyClassKey(DetailsMovieViewModel.class)
+    @LazyClassKey(MovieDetailsViewModel.class)
     @HiltViewModelMap
-    public abstract ViewModel binds(DetailsMovieViewModel vm);
+    public abstract ViewModel binds(MovieDetailsViewModel vm);
   }
 
   @Module
@@ -42,7 +45,7 @@ public final class DetailsMovieViewModel_HiltModules {
 
     @Provides
     @IntoMap
-    @LazyClassKey(DetailsMovieViewModel.class)
+    @LazyClassKey(MovieDetailsViewModel.class)
     @HiltViewModelMap.KeySet
     public static boolean provide() {
       return true;

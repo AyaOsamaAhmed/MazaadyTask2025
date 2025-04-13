@@ -1,6 +1,5 @@
-package com.aya.mazaadytask.listMovies
+package com.aya.mazaadytask.ui.list_movies
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import androidx.core.view.isVisible
@@ -15,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aya.mazaadytask.R
 import com.aya.mazaadytask.base.BaseFragment
 import com.aya.mazaadytask.databinding.ListMovieFragmentBinding
+import com.aya.mazaadytask.ui.list_movies.adapter.MoviesAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 

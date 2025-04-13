@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/ListMovieFragment"
-        android:name="com.aya.mazaadytask.listMovies.ListMovieFragment"
+        android:name="com.aya.mazaadytask.ui.list_movies.ListMovieFragment"
         tools:layout="@layout/list_movie_fragment" >
         <action
             android:id="@+id/ListMovieFragment_to_DetailsMovieFragment"
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/DetailsMovieFragment"
-        android:name="com.aya.mazaadytask.detailsMovie.DetailsMovieFragment"
+        android:name="com.aya.mazaadytask.ui.movie_details.MovieDetailsFragment"
         tools:layout="@layout/details_movie_fragment" >
         <argument
             android:name="id"

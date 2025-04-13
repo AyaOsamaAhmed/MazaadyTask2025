@@ -1,6 +1,8 @@
-package com.aya.mazaadytask.listMovies;
+package com.aya.mazaadytask.list_movies;
 
 import com.aya.data.repository.MovieRepositoryImpl;
+import com.aya.mazaadytask.ui.list_movies.ListMoviesViewModel;
+
 import dagger.internal.DaggerGenerated;
 import dagger.internal.Factory;
 import dagger.internal.QualifierMetadata;

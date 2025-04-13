@@ -1,4 +1,4 @@
-package com.aya.mazaadytask.activity
+package com.aya.mazaadytask.ui.activity
 
 import android.os.Bundle
 import androidx.activity.viewModels
