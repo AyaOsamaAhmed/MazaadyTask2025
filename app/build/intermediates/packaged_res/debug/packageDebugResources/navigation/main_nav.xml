@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/ListMovieFragment">
+
+    <fragment
+        android:id="@+id/ListMovieFragment"
+        android:name="com.aya.mazaadytask.listMovies.ListMovieFragment"
+        tools:layout="@layout/list_movie_fragment" >
+        <action
+            android:id="@+id/ListMovieFragment_to_DetailsMovieFragment"
+            app:destination="@+id/DetailsMovieFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailsMovieFragment"
+        android:name="com.aya.mazaadytask.detailsMovie.DetailsMovieFragment"
+        tools:layout="@layout/details_movie_fragment" >
+        <argument
+            android:name="id"
+            app:argType="long"/>
+    </fragment>
+</navigation>

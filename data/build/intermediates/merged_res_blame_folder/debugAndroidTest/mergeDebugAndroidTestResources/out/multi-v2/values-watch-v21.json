@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.aya.data.test.data-mergeDebugAndroidTestResources-63:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\YaYa\\.gradle\\caches\\8.10.2\\transforms\\c957de0c3db44c004c049496a237473d\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}
